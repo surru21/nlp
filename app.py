@@ -19,10 +19,10 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
        if request.method == 'POST':
-       message = request.form['message']
-       data = [message]
-       vect = tfidf.transform(data).toarray()
-       my_prediction = clf.predict(vect)
+         message = request.form['message']
+         data = [message]
+         vect = tfidf.transform(data).toarray()
+         my_prediction = clf.predict(vect)
        return render_template('result.html',prediction = my_prediction) 
 
 if __name__ == '__main__':
