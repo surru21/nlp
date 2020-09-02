@@ -21,7 +21,6 @@ def predict():
        if request.method == 'POST':
          message = request.form['message']
          data = [message]
-         data=data.replace("_"," ")
          vect = tfidf.transform(data).toarray()
          my_prediction = clf.predict(vect)
        return render_template('result.html',prediction = my_prediction) 
