@@ -32,7 +32,8 @@ def predict():
          all_stopwords_gensim1 = STOPWORDS.union(set(all_punct))                                                           
          all_stopwords_gensim2 = all_stopwords_gensim1.union(set(['hello','cc','sir', 'hi', 'hallo','lady','gentleman','man','hey', 'received from', 'please']))                    
          sw_list = {"cant","can't","cannot","not","@"}                                                 
-         all_stopwords_gensim = all_stopwords_gensim2.difference(sw_list)                  
+         all_stopwords_gensim = all_stopwords_gensim2.difference(sw_list)
+         data=str(data)
          data=data.lower()                              
          data=data.replace("_"," ")          
          data=data.replace("-"," ")          
